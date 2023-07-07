@@ -41,7 +41,9 @@ $templatecontext = [
     'languagemenu' => $languagemenu,
     'authmode' => $authmode,
     'social' => theme_skema_load_socials(),
-    'showaltswitch' => true
+    'showaltswitch' => true,
+    'altauthurl' => new moodle_url('/login/index.php', ['authmode' => 'alt']),
+    'mainauthurl' => new moodle_url('/login/index.php', ['authmode' => 'main'])
 ];
 
 echo $OUTPUT->render_from_template('theme_skema/login', $templatecontext);

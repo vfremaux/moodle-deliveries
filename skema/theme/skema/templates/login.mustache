@@ -63,11 +63,19 @@
                         </ul>
                      </div>
                 </div>
-                <section id="region-main" class="p-0 col-12 h-100" aria-label="{{#str}}content{{/str}}">
+                <section id="region-main" class="login p-0 col-12 h-100" aria-label="{{#str}}content{{/str}}">
                 <div class="login-wrapper">
                     <div class="login-container">
                     {{{ output.main_content }}}
                     </div>
+                    {{#showaltswitch}}
+                    <div class="login-alt-switch">
+                        <a href="{{{altauthurl}}}">{{#str}}switchauthalt, theme_skema{{/str}}</a>
+                    </div>
+                    <div class="login-main-switch">
+                        <a href="{{{mainauthurl}}}">{{#str}}switchauthmain, theme_skema{{/str}}</a>
+                    </div>
+                    {{/showaltswitch}}
                 </div>
                 <div id="accreditations">
                 </div>

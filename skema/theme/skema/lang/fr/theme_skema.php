@@ -17,40 +17,40 @@
 /**
  * Language file.
  *
- * @package   theme_boost
+ * @package   theme_skema
  * @copyright 2016 Frédéric Massart
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['advancedsettings'] = 'Advanced settings';
-$string['backgroundimage'] = 'Background image';
+$string['advancedsettings'] = 'Réglages avancés';
+$string['backgroundimage'] = 'Image de fond';
 $string['backgroundimage_desc'] = 'The image to display as a background of the site. The background image you upload here will override the background image in your theme preset files.';
-$string['brandcolor'] = 'Brand colour';
-$string['brandcolor_desc'] = 'The accent colour.';
+$string['brandcolor'] = 'Couleur primaire';
+$string['brandcolor_desc'] = 'Couleur primaire du thème.';
 $string['bootswatch'] = 'Bootswatch';
-$string['bootswatch_desc'] = 'A bootswatch is a set of Bootstrap variables and css to style Bootstrap';
-$string['choosereadme'] = 'Boost is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['bootswatch_desc'] = 'Un bootswatch est un ensemble de variables Bootstrap et css pour altérer le comportement de Bootstrap';
+$string['choosereadme'] = 'Le theme skema est designé comme personnalisation du theme Boost pour Skema Business School.';
 $string['configtitle'] = 'Theme Skema';
-$string['generalsettings'] = 'General settings';
-$string['loginbackgroundimage'] = 'Login page background image';
-$string['loginbackgroundimage_desc'] = 'The image to display as a background for the login page.';
-$string['nobootswatch'] = 'None';
+$string['generalsettings'] = 'Réglages généraux';
+$string['loginbackgroundimage'] = 'Image de fond de la page de login';
+$string['loginbackgroundimage_desc'] = 'µImage à afficher sur la page d\'accueil. Si aucune n\'est définie, l\'image par défaut du theme est utilisée';
+$string['nobootswatch'] = 'aucun';
 $string['pluginname'] = 'Skema';
-$string['presetfiles'] = 'Additional theme preset files';
-$string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href="https://docs.moodle.org/dev/Boost_Presets">Boost presets</a> for information on creating and sharing your own preset files, and see the <a href="https://archive.moodle.net/boost">Presets repository</a> for presets that others have shared.';
-$string['preset'] = 'Theme preset';
-$string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';
-$string['privacy:metadata'] = 'The Boost theme does not store any personal data about any user.';
-$string['rawscss'] = 'Raw SCSS';
-$string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
-$string['rawscsspre'] = 'Raw initial SCSS';
-$string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
-$string['region-side-pre'] = 'Right';
-$string['showfooter'] = 'Show footer';
-$string['unaddableblocks'] = 'Unneeded blocks';
-$string['unaddableblocks_desc'] = 'The blocks specified are not needed when using this theme and will not be listed in the \'Add a block\' menu.';
+$string['presetfiles'] = 'Fichiers de presets additionnels';
+$string['presetfiles_desc'] = 'Les fichiers de preset peuvent considérablement altérer l\'apparence de Moodle. Voir <a href="https://docs.moodle.org/dev/Boost_Presets">Boost presets</a> for information on creating and sharing your own preset files, and see the <a href="https://archive.moodle.net/boost">Presets repository</a>.';
+$string['preset'] = 'Preset de theme';
+$string['preset_desc'] = 'Sélectionnez un preset pour "tuner" votre Moodle.';
+$string['privacy:metadata'] = 'Le thème Skema ne stocke aucune donnée relative aux utilisateurs.';
+$string['rawscss'] = 'SCSS brute';
+$string['rawscss_desc'] = 'Ecrivez des règles SCSS ou CSS qui viendront s\'ajouter à la fin de la feuille de style.';
+$string['rawscsspre'] = 'SCSS initiale';
+$string['rawscsspre_desc'] = 'Les lignes SCSS de ce champ seront évaluée en début de compilation de la SCSS, On y définit en général des variables.';
+$string['region-side-pre'] = 'Droite';
+$string['showfooter'] = 'Afficher le pied de page';
+$string['unaddableblocks'] = 'Blocs non utilisés';
+$string['unaddableblocks_desc'] = 'Lorsque ce thème est utilisé, les blocs suivants ne sont plus utiles et peuvent être retirés du menu "Ajouter un bloc".';
 $string['privacy:metadata:preference:draweropenblock'] = 'The user\'s preference for hiding or showing the drawer with blocks.';
 $string['privacy:metadata:preference:draweropenindex'] = 'The user\'s preference for hiding or showing the drawer with course index.';
 $string['privacy:metadata:preference:draweropennav'] = 'The user\'s preference for hiding or showing the drawer menu navigation.';
@@ -59,16 +59,8 @@ $string['privacy:drawerindexopen'] = 'The current preference for the index drawe
 $string['privacy:drawerblockclosed'] = 'The current preference for the block drawer is closed.';
 $string['privacy:drawerblockopen'] = 'The current preference for the block drawer is open.';
 
-// Deprecated since Moodle 4.0.
-$string['totop'] = 'Go to top';
 
-// Deprecated since Moodle 4.1.
-$string['currentinparentheses'] = '(current)';
-$string['privacy:drawernavclosed'] = 'The current preference for the navigation drawer is closed.';
-$string['privacy:drawernavopen'] = 'The current preference for the navigation drawer is open.';
-
-
-$string['imagenscurso'] = 'Course Image';
+$string['imagenscurso'] = 'Images de cours';
 
 $string['programvalue1'] = 'Program Value 1';
 $string['programvalue2'] = 'Program Value 2';
@@ -93,6 +85,6 @@ $string['skprogramimage9'] = 'Program Image 9';
 $string['skprogramimage10'] = 'Program Image 10';
 
 
-$string['menuhome'] = 'Home Page';
-$string['switchauthalt'] = 'Local accounts should use this link to log in.';
-$string['switchauthmain'] = 'Go back to main entrance.';
+$string['menuhome'] = 'Accueil';
+$string['switchauthalt'] = 'Utilisez ce lien si votre compte est local';
+$string['switchauthmain'] = 'Revenir à l\'accès principal';

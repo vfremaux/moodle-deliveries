@@ -37,8 +37,16 @@
     min-height: 50px;
 }
 
+section.login {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
 .login-wrapper {
     height: initial;
+    display: flex;
+    flex-direction: column;
 }
 
 .login-box .btn-primary {
@@ -59,6 +67,8 @@
 }
 
 /* authmode control */
+.main-auth .login-main-switch,
+.alt-auth .login-alt-switch,
 .main-auth .login-form {
     display: none;
 }
