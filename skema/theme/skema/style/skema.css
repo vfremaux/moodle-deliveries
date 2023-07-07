@@ -5,6 +5,9 @@
 
 #page-content-head {
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #region-main-box-image {
@@ -74,4 +77,23 @@
 }
 .dual-auth .login-form {
     display: block;
+}
+
+ul.social li {
+    background-color: #000;
+    list-style: none;
+    display: inline-block;
+    padding: 4px;
+    margin-right: 4px;
+    width: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+ul.social li a {
+    color: #fff;
+}
+
+.fa-tiktok:after {
+    content: "\e07b";
 }

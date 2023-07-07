@@ -40,6 +40,8 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes,
     'languagemenu' => $languagemenu,
     'authmode' => $authmode,
+    'social' => theme_skema_load_socials(),
+    'showaltswitch' => true
 ];
 
 echo $OUTPUT->render_from_template('theme_skema/login', $templatecontext);

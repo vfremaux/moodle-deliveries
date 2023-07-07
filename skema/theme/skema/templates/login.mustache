@@ -50,7 +50,18 @@
                         {{> theme_skema/langmenu }}
                     </div>
                     <div id="login-social-links">
-                    </div>
+                        <ul class="social pull-right">
+                            {{#social}}
+                            {{#display}}
+                            <li>
+                                <a href="{{{url}}}" target="_blank">
+                                    <i class="fa fa-{{name}}"></i>
+                                </a>
+                            </li>
+                            {{/display}}
+                            {{/social}}
+                        </ul>
+                     </div>
                 </div>
                 <section id="region-main" class="p-0 col-12 h-100" aria-label="{{#str}}content{{/str}}">
                 <div class="login-wrapper">

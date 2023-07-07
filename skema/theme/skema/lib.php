@@ -58,3 +58,31 @@ function theme_skema_pluginfile($course, $cm, $context, $filearea, $args, $force
         send_file_not_found();
     }
 }
+
+function theme_skema_load_socials() {
+
+    $socials = [
+        ['name' => 'facebook', 'display' => true, 'url' => 'https://www.facebook.com/SKEMA.Business.School'],
+        ['name' => 'tumblr', 'display' => false, ''],
+        ['name'  => 'twitter', 'display' => true, 'url' => 'https://twitter.com/Skema_BS'],
+        ['name' => 'googleplus', 'display' => false, 'url' => ''],
+        ['name' => 'pinterest', 'display' => false, 'url' => ''],
+        ['name' => 'instagram', 'display' => true, 'url' => 'https://www.instagram.com/skema_bs/'],
+        ['name' => 'linkedin', 'display' => true, 'url' => 'https://www.linkedin.com/edu/school?id=22499&amp;goback=%2Epth_*1_*1_*1_*1_*1_*1&amp;trk=edu-up-nav-menu-homecom'],
+        ['name' => 'youtube', 'display' => true, 'url' => 'https://www.youtube.com/skemabstv'],
+        ['name' => 'flicker', 'display' => false, 'url' => ''],
+        ['name' => 'whatsapp', 'display' => false, 'url' => ''],
+        ['name' => 'tiktok', 'display' => true, 'url' => 'https://www.tiktok.com/@skema_businessschool', 'alticon' => ''],
+        ['name' => 'skype', 'display' => false, 'uel' => ''],
+        ['name' => 'wechat', 'display' => true, 'url' => 'https://www.skema.edu/skema/follow-us-on-wechat']
+    ];
+
+    $activesocials = [];
+    foreach ($socials as $s) {
+        if ($s['display']) {
+            $activesocials[] = (object) $s;
+        }
+    }
+
+    return $activesocials;
+}
