@@ -1,0 +1,122 @@
+<!-- TABS MENU -->
+{{#mostrar_menu}}
+    <div class="tab-pane active" id="curso">
+        <div id="accordion" role="tablist">
+            <div class="card">
+                <div class="card-header skema-card-header" role="tab" id="heading-header">
+                    <b class="mb-0 cursos_menu">
+                            COURSES
+                    </b>
+                </div>
+            </div>
+            {{#menu_curso}}
+                <div 
+                    class="card-header" 
+                    role="tab" 
+                    id="heading{{course_id}}" 
+                    {{#current}} 
+                        style="
+                            background-color: #0f6cbf;
+                            color: #e7433c;
+                        " 
+                    {{/current}} 
+                >
+                    <div class="row">
+                        <span class="col-sm-10">
+                            <b class="mb-0">
+                                <a 
+                                    href="{{course_url}}"
+                                    {{#current}} 
+                                        style="color: #fff;"
+                                    {{/current}}
+                                >
+                                    {{course_name}}
+                                </a>
+                            </b>
+                        </span> 
+                        <span class="col-sm-1">
+                            {{#professor}}
+                                {{#visible}}
+                                    <a href="#" class="course_visible" onclick="ocultar_curso('{{{course_id}}}')">
+                                        <span class="icon fa fa-eye" 
+                                            {{#current}} 
+                                                style="color: #fff;"
+                                            {{/current}}     
+                                        ></span>
+                                    </a>
+                                {{/visible}}
+                                {{^visible}}
+                                    <a href="#" onclick="mostrar_curso('{{{course_id}}}')">
+                                        <span class="icon fa fa-eye-slash" 
+                                            {{#current}} 
+                                                style="color: #fff;"
+                                            {{/current}}     
+                                        ></span>
+                                    </a>
+                                {{/visible}}
+                            {{/professor}}
+                            {{#professor_editor}}
+                                {{#visible}}
+                                    <a href="#" class="course_visible">
+                                        <span class="icon fa fa-eye" 
+                                            {{#current}} 
+                                                style="color: #fff;"
+                                            {{/current}}     
+                                        ></span>
+                                    </a>
+                                {{/visible}}
+                                {{^visible}}
+                                    <a href="#">
+                                        <span class="icon fa fa-eye-slash" 
+                                            {{#current}} 
+                                                style="color: #fff;"
+                                            {{/current}}     
+                                        ></span>
+                                    </a>
+                                {{/visible}}
+                            {{/professor_editor}}                            
+                        </span>
+                    </div>
+                </div>
+            {{/menu_curso}}             
+        </div>
+    </div>
+</br> 
+{{/mostrar_menu}} 
+
+{{#professor}}
+<Script>
+    function mostrar_curso(curso) {
+        $.ajax({
+            method: "POST",
+            data: { action: 'ShowCurse', course: curso},
+            url: '/skema_api/webservice.php',
+            crossDomain: true,
+            xhrFields: {
+                withCredentials: true,
+            }
+        }).done(function() {
+            window.location.reload();
+        });
+    }
+    function ocultar_curso(curso) {
+        $.ajax({
+            method: "POST",
+            data: { action: 'HideCurse', course: curso },
+            url: '/skema_api/webservice.php',
+            crossDomain: true,
+            xhrFields: {
+                withCredentials: true,
+            }
+        }).done(function() {
+            window.location.reload();
+        });
+    }  
+
+    $('.accordion-toggle').click(function(){
+       $(this).parent()
+               .find("i.indicator")
+               .toggleClass('fa-caret-down fa-caret-up');
+  });
+</Script>
+{{/professor}}

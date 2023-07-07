@@ -1,0 +1,77 @@
+
+.pagelayout-login #page {
+    background-image: none;
+}
+
+#page-content-head {
+    padding: 10px;
+}
+
+#region-main-box-image {
+    background-image : url("[[pix:theme|wallpaper_skema]]");
+    background-size : cover;
+}
+
+.loginform {
+    padding: 40% 0 0 0;
+}
+
+.login-box h1 {
+    display: none;
+}
+
+.login-container {
+    box-shadow: none;
+    background-color: #f8f9fa; 
+    border-radius: 0;
+}
+
+#accreditations {
+    background-image : url("[[pix:theme|skema_accred]]");
+    background-position: 90% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 50px;
+}
+
+.login-wrapper {
+    height: initial;
+}
+
+.login-box .btn-primary {
+    background-color: #e00000;
+    color: white;
+    border-radius: 0;
+    padding: 10px;    
+    width: 100%;
+    font-size: 12pt;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 0;
+    font-size: 12pt;
+}
+
+/* authmode control */
+.main-auth .login-form {
+    display: none;
+}
+.main-auth .login-identityproviders {
+    display: block;
+}
+.dual-auth .login-identityproviders {
+    display: block;
+}
+
+.alt-auth .login-form {
+    display: block;
+}
+.main-auth .login-identityproviders {
+    display: none;
+}
+.dual-auth .login-form {
+    display: block;
+}
