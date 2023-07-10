@@ -13,6 +13,7 @@
 #region-main-box-image {
     background-image : url("[[pix:theme|wallpaper_skema]]");
     background-size : cover;
+    background-position : top right;
 }
 
 .loginform {
@@ -25,7 +26,7 @@
 
 .login-container {
     box-shadow: none;
-    background-color: #f8f9fa; 
+    background-color: #f1ece1; 
     border-radius: 0;
 }
 
@@ -53,7 +54,7 @@ section.login {
     background-color: #e00000;
     color: white;
     border-radius: 0;
-    padding: 10px;    
+    padding: 10px;
     width: 100%;
     font-size: 12pt;
 }
@@ -72,9 +73,12 @@ section.login {
 .main-auth .login-form {
     display: none;
 }
+
 .main-auth .login-identityproviders {
     display: block;
 }
+
+.dual-auth .login-form,
 .dual-auth .login-identityproviders {
     display: block;
 }
@@ -82,9 +86,10 @@ section.login {
 .alt-auth .login-form {
     display: block;
 }
-.main-auth .login-identityproviders {
+.alt-auth .login-identityproviders {
     display: none;
 }
+
 .dual-auth .login-form {
     display: block;
 }
@@ -96,8 +101,9 @@ ul.social li {
     padding: 4px;
     margin-right: 4px;
     width: 30px;
-    border-radius: 5px;
+    border-radius: 2em;
     text-align: center;
+    font-size: 12pt;
 }
 
 ul.social li a {
@@ -105,5 +111,5 @@ ul.social li a {
 }
 
 .fa-tiktok:after {
-    content: "\e07b";
+    content: url("[[pix:theme|tiktok]]");
 }
