@@ -55,7 +55,12 @@
                             {{#display}}
                             <li>
                                 <a href="{{{url}}}" target="_blank">
+                                    {{#alticon}}
+                                    <i class="fa {{name}}"><img src="{{alticon}}" /></i>
+                                    {{/alticon}}
+                                    {{^alticon}}
                                     <i class="fa fa-{{name}}"></i>
+                                    {{/alticon}}
                                 </a>
                             </li>
                             {{/display}}

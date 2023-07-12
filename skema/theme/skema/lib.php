@@ -60,6 +60,9 @@ function theme_skema_pluginfile($course, $cm, $context, $filearea, $args, $force
 }
 
 function theme_skema_load_socials() {
+    global $OUTPUT;
+
+    $tiktokiconurl = $OUTPUT->image_url('tiktok', 'theme_skema');
 
     $socials = [
         ['name' => 'facebook', 'display' => true, 'url' => 'https://www.facebook.com/SKEMA.Business.School'],
@@ -72,7 +75,7 @@ function theme_skema_load_socials() {
         ['name' => 'youtube', 'display' => true, 'url' => 'https://www.youtube.com/skemabstv'],
         ['name' => 'flicker', 'display' => false, 'url' => ''],
         ['name' => 'whatsapp', 'display' => false, 'url' => ''],
-        ['name' => 'tiktok', 'display' => true, 'url' => 'https://www.tiktok.com/@skema_businessschool', 'alticon' => ''],
+        ['name' => 'tiktok', 'display' => true, 'url' => 'https://www.tiktok.com/@skema_businessschool', 'alticon' => $tiktokiconurl],
         ['name' => 'skype', 'display' => false, 'uel' => ''],
         ['name' => 'wechat', 'display' => true, 'url' => 'https://www.skema.edu/skema/follow-us-on-wechat']
     ];

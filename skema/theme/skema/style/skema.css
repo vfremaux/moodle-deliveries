@@ -110,6 +110,6 @@ ul.social li a {
     color: #fff;
 }
 
-.fa-tiktok:after {
-    content: url("[[pix:theme|tiktok]]");
+.fa.tiktok img {
+    height: 12pt;
 }
